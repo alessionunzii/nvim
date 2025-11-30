@@ -9,8 +9,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.swapfile = false
 
-vim.keymap.set("n", "<leader>r", ":!javac % && cd %:h && java %:t:r<CR>", { desc = "Run Java file" })
-
+vim.keymap.set("n", "<leader>r", ":!javac % && cd %:h && java %:t:r<CR>")
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.keymap.set('n', '<C-a>', ':%y +<CR>') --Copia tutto il file
 vim.keymap.set('i', '<C-v>', '<C-r>+') --Incolla
