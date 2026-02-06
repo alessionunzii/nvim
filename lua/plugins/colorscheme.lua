@@ -1,6 +1,3 @@
--- Add this to your lazy.nvim plugins configuration
--- Usually in ~/.config/nvim/lua/plugins/colorscheme.lua
--- or in your main lazy setup file
 return {
   "rebelot/kanagawa.nvim",
   priority = 1000, -- Load colorscheme before other plugins
@@ -14,7 +11,7 @@ return {
       statementStyle = { bold = true },
       typeStyle = {},
       transparent = true,         -- do not set background color
-      dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+      dimInactive = false,         -- dim inactive window :h hl-NormalNC
       terminalColors = true,       -- define vim.g.terminal_color_{0,17}
       colors = {                   -- add/modify theme and palette colors
         palette = {},
@@ -35,7 +32,6 @@ return {
         light = "lotus"
       },
     })
-    
     -- Set the colorscheme
     vim.cmd("colorscheme kanagawa")
   end,
