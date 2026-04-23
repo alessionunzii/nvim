@@ -36,6 +36,7 @@ return {
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
   },
+ 
   -- Add this new plugin entry
   {
     "mfussenegger/nvim-jdtls",
