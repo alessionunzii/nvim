@@ -5,9 +5,9 @@ return {
     require("kanagawa").setup({
       compile = false,             -- enable compiling the colorscheme
       undercurl = true,            -- enable undercurls
-      commentStyle = { italic = true },
-      functionStyle = {},
-      keywordStyle = { italic = true},
+      commentStyle = { italic = false },
+      functionStyle = { italic = false},
+      keywordStyle = { italic = false},
       statementStyle = { bold = true },
       typeStyle = {},
       transparent = true,         -- do not set background color
@@ -29,7 +29,7 @@ return {
       theme = "dragon",              -- Load "wave" theme when 'background' option is not set
       background = {               -- map the value of 'background' option to a theme
         dark = "dragon",             -- try "dragon" !
-        light = "lotus"
+        light = "dragon"
       },
     })
     -- Set the colorscheme

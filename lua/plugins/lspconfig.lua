@@ -26,8 +26,8 @@ return {
       lspconfig.solargraph.setup({ capabilities = capabilities })
       lspconfig.html.setup({ capabilities = capabilities })
       lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.clangd.setup({ capabilities = capabilities }) -- added clangd
-      -- DO NOT add jdtls here, nvim-jdtls handles it
+      lspconfig.clangd.setup({ capabilities = capabilities })
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
