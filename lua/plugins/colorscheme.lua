@@ -1,27 +1,38 @@
 return {
-  "folke/tokyonight.nvim",
+  "rebelot/kanagawa.nvim",
   priority = 1000,
   config = function()
-    require("tokyonight").setup({
-      style = "night",
+    require("kanagawa").setup({
+      compile = false,
       transparent = true,
-      terminal_colors = true,
-      styles = {
-        comments = { italic = false },
-        keywords = { italic = false },
-        functions = {},
-        variables = {},
-        sidebars = "transparent",
-        floats = "transparent",
+      terminalColors = true,
+      dimInactive = false,
+      commentStyle = { italic = false },
+      keywordStyle = { italic = false },
+      functionStyle = {},
+      variableStyle = {},
+      colors = {
+        theme = {
+          all = {
+            ui = { bg_gutter = "none" }, -- transparent line numbers / sign column
+          },
+        },
       },
-      on_highlights = function(hl, _)
-        hl.LineNr = { bg = "NONE" }
-        hl.LineNrAbove = { bg = "NONE" }
-        hl.LineNrBelow = { bg = "NONE" }
-        hl.SignColumn = { bg = "NONE" }
-        hl.FoldColumn = { bg = "NONE" }
+      overrides = function(_)
+        return {
+          LineNr = { bg = "NONE" },
+          LineNrAbove = { bg = "NONE" },
+          LineNrBelow = { bg = "NONE" },
+          SignColumn = { bg = "NONE" },
+          FoldColumn = { bg = "NONE" },
+          NormalFloat = { bg = "NONE" },
+          FloatBorder = { bg = "NONE" },
+          FloatTitle = { bg = "NONE" },
+        }
       end,
+      theme = "wave", -- "wave" | "dragon" | "lotus"
+      background = { dark = "wave", light = "lotus" },
     })
-    vim.cmd("colorscheme tokyonight")
+    vim.cmd("colorscheme kanagawa")
   end,
 }
