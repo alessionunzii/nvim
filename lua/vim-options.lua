@@ -7,7 +7,7 @@ vim.g.mapleader = " "
 vim.g.background = "dark"
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.swapfile = false
 
 vim.keymap.set('n', '<C-n>', '<C-w>v', { desc = 'Split window vertically' })
